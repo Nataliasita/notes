@@ -40,10 +40,14 @@
 .btn_register{
     background: none;
     border: none;
-    width: 10vw;
+    width: 11vw;
     margin-top: -1vh;
+    text-align: center;
     color: #656565;
     font-weight: 600;
+}
+.btn_register:hover{
+    cursor: pointer;
 }
 .btn_login{
 
@@ -55,6 +59,9 @@
     border:0;
     margin:7vh 5vw 3vh 5vw;
     font-size: 1.1em;
+}
+.btn_login:hover{
+    cursor: pointer;
 }
 .btn_register_container{
     display: flex;
