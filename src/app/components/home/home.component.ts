@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,14 +9,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+   contain_register=false;
+   contain_log=true;
 
     title ='example react form';
 
     public formLogin!:FormGroup 
+    public formRegister!: FormGroup
 
   constructor( private formBuilder:FormBuilder) {
-
-   }
+  }
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
@@ -27,17 +31,54 @@ export class HomeComponent implements OnInit {
       password:['',
       [
         Validators.required,
-        Validators.minLength(6)
+        Validators.minLength(6),
       ]
-       
-
-      ]
+      ],
     });
+    this.formRegister =this.formBuilder.group({
+      name_user_new:['',
+      [
+        Validators.required,
+        Validators.minLength(6),
+      ],
+    ],
+      email_new:['',
+      [
+        Validators.required,
+        Validators.email
+      ],
+    ],
+      password_new:['',
+      [
+        Validators.required,
+        Validators.minLength(6),
+      ]
+      ],
+
+    })
 
   }
 
   send(): any{
-    console.log(this.formLogin!.value)
+    if(this.formLogin.valid){
+      console.log(this.formLogin!.value);
+      this.onResetForm();
+      
+    }
+    
+  }
+
+  onResetForm(){
+    this.formLogin.reset();
+  }
+
+  res(){
+    if(this.contain_register=true){
+      this.contain_log=false
+    }
+  }
+  send_new_user():any{
+    console.log(this.formRegister.value);
   }
 
 

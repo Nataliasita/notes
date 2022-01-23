@@ -1,29 +1,50 @@
-<section class="container">
+<section class="container" id="home" >
             <img class="title_home" src="./assets/title.png" alt="">
 
-    <div class="container-form">
+    <div class="container-form" *ngIf='contain_log'>
             <form action="" [formGroup]="formLogin" (submit)="send()">
                    
                     <input class="data-form" type="text" placeholder="Correo Electronico" formControlName="email">
                     <input class="data-form" type="password" placeholder="Contraseña" formControlName="password">
 
-                    <button class="btn_login">Iniciar Sesion</button>
-
+                    <button class="btn_login" [routerLink]="['/dashboard']" [disabled]="formLogin.invalid">Iniciar Sesion</button>
+            
             </form>
 
                 <div class="btn_register_container">
                     <span>¿Aún no tienes cuenta? </span> <br> 
 
-                    <button class="btn_register">Registrate aqui</button>
+                    <button class="btn_register" (click)='res()' >Registrate aqui</button>
                 </div>
 
 
 
     </div>
-        valido:{{formLogin.valid | json}}
-    <div>
 
-      
-    </div>
+
+            
+
+          <div class="container-register" *ngIf='contain_register'>
+            <!-- valido:{{formLogin.valid | json}} -->
+                  <div class="btn_register_container2">
+                     <h3 >Registrarte</h3><br>
+                            <span>Es muy facil, ingresa los siguientes datos</span>
+                  </div>
+                 <form action="" [formGroup]="formRegister" (submit)="send_new_user()">
+
+                    <input class="data-form" type="text" placeholder="Nickname" formControlName="name_user_new">
+                    <input class="data-form" type="text" placeholder="Correo Electronico" formControlName="email_new">
+                    <input class="data-form" type="password" placeholder="Contraseña" formControlName="password_new">  
+
+                        <button class="btn_login" [routerLink]="['/dashboard']" [disabled]="formRegister.invalid">Registrarme</button>
+                 </form>
+    
+          
+          </div>
+          
+          
+          
 
 </section>
+
+

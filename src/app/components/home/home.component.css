@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 .btn_login{
-
+    font-family: 'Lato', sans-serif;
     width: 13vw;
     height: 7vh;
     background: #0086E8;
@@ -61,6 +61,8 @@
 }
 .btn_login:hover{
     cursor: pointer;
+    background: #006ab6;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .btn_register_container{
     display: flex;
@@ -70,5 +72,27 @@
     padding-left: 2vw;
     justify-content: center;
     margin-left: 3.9vw;
+    color: #656565;
+}
+.container-register{
+    width: 30vw;
+    height: 60vh;
+    justify-content: center;
+    flex-direction: column ;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    border-radius: 25px;
+    padding: 3em;
+    padding-top: 8vh;
+    margin-left: 5vw;
+}
+.btn_register_container2{
+    display: flex;
+    flex-direction: column;
+    height: 8vh;
+    width: 25vw;
+    text-align: center;
+    justify-content: center;
+    margin-left: -1vw;
     color: #656565;
 }
