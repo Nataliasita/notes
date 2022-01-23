@@ -2,10 +2,10 @@
             <img class="title_home" src="./assets/title.png" alt="">
 
     <div class="container-form">
-            <form action="">
+            <form action="" [formGroup]="formLogin" (submit)="send()">
                    
-                    <input class="data-form" type="text" placeholder="Correo Electronico">
-                    <input class="data-form" placeholder="Contraseña">
+                    <input class="data-form" type="text" placeholder="Correo Electronico" formControlName="email">
+                    <input class="data-form" type="password" placeholder="Contraseña" formControlName="password">
 
                     <button class="btn_login">Iniciar Sesion</button>
 
@@ -20,6 +20,10 @@
 
 
     </div>
+        valido:{{formLogin.valid | json}}
+    <div>
 
+      
+    </div>
 
 </section>
