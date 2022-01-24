@@ -1,12 +1,21 @@
 .board{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .bar_nav{
     height: 10vh;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    z-index: 2;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    background: #1690e7;
 }
 .bar_aside{
     height: 90%;
@@ -17,6 +26,29 @@
     transform: rotate(-23deg);
     background-repeat: no-repeat;
     border-top-right-radius: 110px;
+    position: absolute;
+    top:10vh;
+    left: 0;
+}
+.bar_aside::before{
+    content: '';
+    position: absolute;
+    height: 80vw;
+    width: 23vw;
+    background-color: rgba(42, 188, 255, 0.052);
+    transform: rotate(23deg);
+    left: -8vw;
+    top: -2vh;
+    backdrop-filter: blur(2px);
 
-    
+}
+.container_note{
+    height: 85%;
+    width: 78%;
+    /* background: rgb(0, 174, 255); */
+    /* background: linear-gradient( rgb(0, 174, 255, 0.1), #ffffff); */
+    position: absolute;
+    right: 1vw;
+    top: 13vh;
+    z-index: 50;
 }
