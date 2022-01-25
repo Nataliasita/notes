@@ -1,21 +1,35 @@
 <section class="board">
 
     <nav class="bar_nav">
+        <img class="title_dashboard" src="./assets/title.png" alt="">
 
-
+        <button [routerLink]="['/home']" >Sign out</button>
 
     </nav>
 
     <aside class="bar_aside">
 
+        <div class="create_note">
+            <form action="" [formGroup]="formNote">
+            <input type="text" placeholder="Insert Title" [(ngModel)]='selectedNote.title' formControlName="title">
+            <textarea name="" id="" cols="25" rows="5" placeholder="Insert description" [(ngModel)]='selectedNote.description' formControlName="description"></textarea>
+                <button  (click)="addOrEdit()">Save</button>
+
+            </form>       
+        </div>
 
 
     </aside>
 
     <div class="container_note">
 
-      
-
+      <div class="nota" *ngFor=" let note of notesArray" (click)='editNote(note)'>
+        
+            <h3 class="title_note">{{note.title}}</h3>
+        
+          <p class="description_note">{{note.description}}</p>
+    
+      </div>
 
     </div>
 

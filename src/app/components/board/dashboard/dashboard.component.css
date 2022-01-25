@@ -9,39 +9,42 @@
     flex-wrap: wrap;
 }
 .bar_nav{
-    height: 10vh;
+    height: 11vh;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin-left: 0;
     position: absolute;
     top: 0;
+    display: flex;
     background: #1690e7;
+    align-items: center;
+    padding: 0 2vw;
+    justify-content:space-between;
+}
+.title_dashboard{
+    height: 8vh;
+    width: 10vw;
+    background-color: rgb(253, 253, 253);
+    border-radius: 8px;
+    padding: 0.5vh 0.5vw;
 }
 .bar_aside{
-    height: 90%;
+    height: 89%;
     width: 20%;
     background-color: #ffffff;
     background-image: url('src/assets/fnd_2.png');
     background-size: 110% 100%;
-    transform: rotate(-23deg);
+    /* transform: rotate(-23deg); */
     background-repeat: no-repeat;
     border-top-right-radius: 110px;
     position: absolute;
-    top:10vh;
+    top:11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     left: 0;
 }
-.bar_aside::before{
-    content: '';
-    position: absolute;
-    height: 80vw;
-    width: 23vw;
-    background-color: rgba(42, 188, 255, 0.052);
-    transform: rotate(23deg);
-    left: -8vw;
-    top: -2vh;
-    backdrop-filter: blur(2px);
 
-}
 .container_note{
     height: 85%;
     width: 78%;
@@ -51,4 +54,69 @@
     right: 1vw;
     top: 13vh;
     z-index: 50;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+    grid-row: auto;
+    overflow-y: scroll;
+    padding: 4vh 3vw;
+
+    justify-content: center;
+ 
 }
+.container_note::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.container_note::-webkit-scrollbar:vertical {
+    width:0.5vw;
+    display: none;
+}
+
+.container_note::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.container_note::-webkit-scrollbar:horizontal {
+    height: 4vh;
+    display: none;
+}
+
+.container_note::-webkit-scrollbar-thumb {
+    background-color: #02778900;
+    border-radius: 20px;
+}
+.container_note::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+.nota{
+    width: 16vw;
+    height: 25vh;
+    margin:0;
+    /* background: linear-gradient( rgb(0, 174, 255, 0.1) 80%, #ffffff); */
+    background: rgb(0, 174, 255, 0.1);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+}
+.create_note{
+    width: 17vw;
+    height: 30vh;
+    z-index: 2;
+    display: flex;
+    background-color: crimson;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title_note{
+    width: 14vw;
+}
+.description_note{
+    width: 14vw;
+    height: 15vh;
+}
+
