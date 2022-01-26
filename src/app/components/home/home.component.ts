@@ -23,13 +23,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
-      email:['',
+      email:['user-demo@gmail.com',
       [
         Validators.required,
         Validators.email,
       ],
     ],
-      password:['',
+      password:['123456',
       [
         Validators.required,
         Validators.minLength(6),
