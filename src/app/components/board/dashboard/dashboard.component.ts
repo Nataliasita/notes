@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DashboardComponent implements OnInit {
   messageEdit!:string;
+  flag=false;
 
   public formNote!:FormGroup 
 
@@ -54,11 +55,13 @@ export class DashboardComponent implements OnInit {
   editNote(note:DataNotes){
     this.selectedNote = note;
     this.messageEdit='Edit Note';
+    this.flag=true;
   }
   deleteNote(){
     this.notesArray = this.notesArray.filter(x => x != this.selectedNote);
     this.selectedNote = new DataNotes();
     this.messageEdit='';
+    this.flag=false;
   }
 
 }

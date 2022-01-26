@@ -61,7 +61,7 @@
 }
 .btn_login:hover{
     cursor: pointer;
-    background: #006ab6;
+    background: #fca7ae;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .btn_register_container{
@@ -95,4 +95,25 @@
     justify-content: center;
     margin-left: -1vw;
     color: #656565;
+}
+.error{
+    border-bottom: 3px solid #ff0000 ;
+}
+.return{
+    background-image: url('src/assets/return.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6.8vh;
+    width: 3vw;
+    position: absolute;
+    background-color: rgba(255, 222, 173, 0);
+    border: 0;
+    top:-1vh;
+    left: 1vw;
+}
+.return:hover{
+    cursor: pointer;
+    background-color: #0087e823;
+    border-radius: 1000px;
 }

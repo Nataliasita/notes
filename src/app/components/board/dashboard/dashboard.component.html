@@ -12,15 +12,15 @@
         <h2 class="title_das2">Here you can create, edit and delete your notes . . .</h2>
 
 
-        <div class="create_note">
+        <div class="create_note" [ngClass]="{'fnd-note': flag}">
             <form action="" [formGroup]="formNote">
             <div class="main_edit">
                 <h3>{{messageEdit}}</h3> <button class='btn_delete' *ngIf='selectedNote.id !== 0' (click)='deleteNote()'><img class='img_delete' src="./assets/delete.png" alt=""></button>
             </div>    
-            <input id="insert_title"  type="text" placeholder="Insert Title" [(ngModel)]='selectedNote.title' formControlName="title">
-            <textarea name="" id="text_description" cols="25" rows="5" placeholder="Insert description" [(ngModel)]='selectedNote.description' formControlName="description"></textarea>
+            <input id="insert_title"  type="text" placeholder="Insert title" [(ngModel)]='selectedNote.title' formControlName="title">
+            <textarea  id="text_description" cols="25" rows="5" placeholder="Insert description" [(ngModel)]='selectedNote.description' formControlName="description"></textarea>
  
-                       <button class='btn_save' (click)="addOrEdit()">Save</button>
+                       <button class='btn_save' (click)="addOrEdit()" >Save</button>
                         
                 
             </form>       

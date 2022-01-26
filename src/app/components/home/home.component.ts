@@ -1,5 +1,6 @@
+import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
       email:['',
       [
         Validators.required,
-        Validators.email
+        Validators.email,
       ],
     ],
       password:['',
@@ -62,8 +63,7 @@ export class HomeComponent implements OnInit {
   send(): any{
     if(this.formLogin.valid){
       console.log(this.formLogin!.value);
-      this.onResetForm();
-      
+      this.onResetForm(); 
     }
     
   }
@@ -74,8 +74,13 @@ export class HomeComponent implements OnInit {
 
   res(){
     if(this.contain_register=true){
-      this.contain_log=false
+      this.contain_log=false;
     }
+  }
+  res2(){
+    this.contain_register=false
+    this.contain_log=true;
+
   }
   send_new_user():any{
     console.log(this.formRegister.value);
