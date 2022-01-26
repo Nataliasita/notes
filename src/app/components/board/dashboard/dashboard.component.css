@@ -23,14 +23,14 @@
 }
 .title_dashboard{
     height: 8vh;
-    width: 10vw;
+    width: 8vw;
     background-color: rgb(253, 253, 253);
     border-radius: 8px;
     padding: 0.5vh 0.5vw;
 }
 .bar_aside{
     height: 89%;
-    width: 20%;
+    width: 22%;
     background-color: #ffffff;
     background-image: url('src/assets/fnd_2.png');
     background-size: 110% 100%;
@@ -41,7 +41,8 @@
     top:11vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     left: 0;
 }
 
@@ -98,25 +99,93 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 0.8em;
+    padding: 0 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.nota:hover{
+    cursor: cell;
+    background: rgba(0, 174, 255, 0.178);
 }
 .create_note{
-    width: 17vw;
-    height: 30vh;
+    width: 20vw;
+    height: 41vh;
     z-index: 2;
     display: flex;
-    background-color: crimson;
+    background-color:#0086E8;
     display: flex;
-    padding: 1em;
+    padding: 0.5vh 1.5vw;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    border-radius: 5px;
+    
 }
 .title_note{
     width: 14vw;
+    color: rgb(63, 63, 63);
 }
 .description_note{
+    color: rgb(63, 63, 63);
     width: 14vw;
-    height: 15vh;
+    height: 16vh;
+   
+}
+.btn_save{
+    width: 9vw;
+    height: 6vh;
+    background: #ffffff;
+    border:0;
+    border-radius: 40px;
+    color: #0077cc;
+    font-weight: 600;
+    font-size: 1em;
+}
+.btn_save:hover{
+    cursor: pointer;
+    background: #f9c0ff;
+
+}
+.btn_delete{
+    height: 6vh;
+    width: 3vw;
+    border:none;
+    background: none;
+}
+.btn_delete:hover{
+    cursor: pointer;
+    background: rgb(0, 113, 243);
+    border-radius: 20px;
+}
+.img_delete{
+    height: 3.5vh;
+
+}
+.main_edit{
+    width: 18vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 1vh;
+}
+.title_das2{
+   width: 16vw;
+   color: rgb(63, 63, 63);
+   margin: 5vh 0 7vh 0;
+   text-align: center;
+}
+#text_description{
+    margin: 1.5vh 0 1.5vh 0;
+    width: 17vw;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    padding: 0.5vh 0 0 0.5vw;
+}
+#insert_title{
+    height: 5vh;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    padding-left: 0.5vw;
 }
 
