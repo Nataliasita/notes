@@ -15,9 +15,10 @@ export class DashboardComponent implements OnInit {
   public formNote!:FormGroup 
 
   notesArray: DataNotes[] = [
-    {id:1,title:'Note 1', description:'prueba'},
-    {id:2,title:'Note 2', description:'prueba'},
-    {id:3,title:'Note 3', description:'prueba'}
+    {id:1,title:'Note 1', description:'here you can create'},
+    {id:2,title:'Note 2', description:'here you can edit'},
+    {id:3,title:'Note 3', description:'here you can delete'},
+    {id:4,title:'Note 4', description:'and much more '}
   ];
 
   selectedNote: DataNotes =new DataNotes();
